@@ -1,0 +1,84 @@
+# .bashrc
+# Source global definitions-
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+#----------------------------
+
+#Locale
+LANG=ja_JP.UTF-8
+
+
+
+
+#Prompt
+PS1='[\u] \w \$ '
+
+
+
+
+#------------------------+
+#  Environment variable  |
+#------------------------+
+
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+
+
+#----------+
+#  Alias   |
+#----------+
+
+#File operation
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -l -a'
+alias rm='ls -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+#centos version
+alias version='cat /etc/redhat-release'
+
+#bash
+alias bashr='source ~/.bashrc'
+alias bashe='vim ~/.bashrc'
+alias bashout='cp ~/.bashrc ~/synced/.bashrc_backup.txt'
+
+bashout2 () {
+
+cp ~/.bashrc ~/synced/.bashrc_backup.txt
+cp ~/.bashrc ~/config/.bashrc_backup
+
+}
+
+
+
+
+
+#Jobs
+alias jobs='jobs -l'
+
+
+#----------+
+#   Tmux   |
+#----------+
+
+#tmux
+alias tmuxe='vim ~/.tmux.conf'
+alias tmuxout='cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt'
+
+#run tmux
+if [ -z $TMUX ]; then
+  if $(tmux has-session); then
+    tmux attach
+  else
+    tmux
+  fi
+fi
+
+
+
+
