@@ -31,6 +31,9 @@ alias lla='ls -l -a'
 alias rm='ls -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias lsc='ls -AlFh --show-control-chars --color=auto'
+alias df='df -h'
+
 
 #centos version
 alias version='cat /etc/redhat-release'
