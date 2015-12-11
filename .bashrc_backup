@@ -1,9 +1,14 @@
 # .bashrc
-# Source global definitions-
-if [ -f /etc/bashrc ]; then
+# Source global definitions-+
+if [ -f /etc/bashrc ]; then 
 	. /etc/bashrc
 fi
 #----------------------------
+
+
+#------------------------+
+#      OS setting        |
+#------------------------+
 
 #Locale
 LANG=ja_JP.UTF-8
@@ -48,10 +53,6 @@ bashout ()
   cp ~/.bashrc ~/config/.bashrc_backup
   /home/vagrant/config/push.sh
 }
-
-
-
-
 
 #Jobs
 alias jobs='jobs -l'
