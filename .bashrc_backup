@@ -41,11 +41,9 @@ alias bashe='vim ~/.bashrc'
 
 bashout ()
 {
-
   cp ~/.bashrc ~/synced/.bashrc_backup.txt
   cp ~/.bashrc ~/config/.bashrc_backup
-  /home/config/push.sh
-
+  /home/vagrant/config/push.sh
 }
 
 
