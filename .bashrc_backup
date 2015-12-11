@@ -8,13 +8,8 @@ fi
 #Locale
 LANG=ja_JP.UTF-8
 
-
-
-
 #Prompt
 PS1='[\u] \w \$ '
-
-
 
 
 #------------------------+
@@ -23,8 +18,6 @@ PS1='[\u] \w \$ '
 
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
 
 
 #----------+
@@ -45,12 +38,13 @@ alias version='cat /etc/redhat-release'
 #bash
 alias bashr='source ~/.bashrc'
 alias bashe='vim ~/.bashrc'
-alias bashout='cp ~/.bashrc ~/synced/.bashrc_backup.txt'
 
-bashout2 () {
+bashout ()
+{
 
-cp ~/.bashrc ~/synced/.bashrc_backup.txt
-cp ~/.bashrc ~/config/.bashrc_backup
+  cp ~/.bashrc ~/synced/.bashrc_backup.txt
+  cp ~/.bashrc ~/config/.bashrc_backup
+  /home/config/push.sh
 
 }
 
