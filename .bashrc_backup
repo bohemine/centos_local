@@ -60,8 +60,8 @@ bashrcc ()
 {
   ori_dir=$(pwd)
   echo $ori_dir
-  cp ~/.bashrc ~/synced/.bashrc_backup.txt
-  cp ~/.bashrc ~/config/.bashrc_backup
+  \cp ~/.bashrc ~/synced/.bashrc_backup.txt
+  \cp ~/.bashrc ~/config/.bashrc_backup
   cd /home/vagrant/config
   /home/vagrant/config/push.sh
   cd $ori_dir
