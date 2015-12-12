@@ -59,13 +59,13 @@ alias bashrce='vim ~/.bashrc'
 bashrcc ()
 {
   ori_dir=$(pwd)
-  echo $ori_dir
   \cp ~/.bashrc ~/synced/.bashrc_backup.txt
   \cp ~/.bashrc ~/config/.bashrc_backup
   cd /home/vagrant/config
-  /home/vagrant/config/push.sh
+  /home/vagrant/config/push.sh 
   cd $ori_dir
 }
+
 
 #bash_profile
 alias bashpror='source ~/.bash_profile'
@@ -73,11 +73,14 @@ alias bashproe='vim ~/.bash_profile'
 
 bashproc ()
 {
-  cp ~/.bashrc ~/synced/.bash_profile_backup.txt
-  cp ~/.bashrc ~/config/.bash_profile_backup
+  ori_dir=$(pwd)
+  \cp ~/.bashrc_profile ~/synced/.bash_profile_backup.txt
+  \cp ~/.bashrc_profile ~/config/.bash_profile_backup
+  cd /home/vagrant/config
   /home/vagrant/config/push.sh
+  /home/vagrant/config/push.sh
+  cd $ori_dir
 }
-
 
 
 
