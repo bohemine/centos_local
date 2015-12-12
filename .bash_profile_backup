@@ -1,106 +1,19 @@
-# .bashrc
-# Source global definitions-+
-if [ -f /etc/bashrc ]; then 
-	. /etc/bashrc
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
 fi
-#----------------------------
 
+# User specific environment and startup programs
 
-#--------------+
-#  OS setting  |
-#--------------+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=$PATH:$HOME/.node
 
-#Locale
-LANG=ja_JP.UTF-8
-
-#Prompt
-PS1='[\u] \w \$ '
-
-#centos version
-alias version='cat /etc/redhat-release'
+export PATH
 
 
 
-
-#------------------------+
-#  Environment variable  |
-#------------------------+
-
-export NVM_DIR="/home/vagrant/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
-
-#------------------+
-#  File operation  |
-#------------------+
-
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -l -a'
-alias rm='ls -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias lsc='ls -AlFh --show-control-chars --color=auto'
-alias df='df -h'
-
-
-#Jobs
-alias jobs='jobs -l'
-
-#---------+
-#  Shell  |
-#---------+
-
-#bashrc
-alias bashrcr='source ~/.bashrc'
-alias bashrce='vim ~/.bashrc'
-
-bashrcc ()
-{
-  ori_dir=$(pwd)
-  \cp ~/.bashrc ~/synced/.bashrc_backup.txt
-  \cp ~/.bashrc ~/config/.bashrc_backup
-  cd /home/vagrant/config
-  /home/vagrant/config/push.sh 
-  cd $ori_dir
-}
-
-
-#bash_profile
-alias bashpror='source ~/.bash_profile'
-alias bashproe='vim ~/.bash_profile'
-
-bashproc ()
-{
-  ori_dir=$(pwd)
-  \cp ~/.bashrc ~/synced/.bash_profile_backup.txt
-  \cp ~/.bashrc ~/config/.bash_profile_backup
-  cd /home/vagrant/config
-  /home/vagrant/config/push.sh
-  /home/vagrant/config/push.sh
-  cd $ori_dir
-}
-
-
-
-
-#----------+
-#   Tmux   |
-#----------+
-
-#tmux
-alias tmuxe='vim ~/.tmux.conf'
-alias tmuxout='cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt'
-
-#run tmux
-if [ -z $TMUX ]; then
-  if $(tmux has-session); then
-    tmux attach
-  else
-    tmux
-  fi
-fi
 
 
 
