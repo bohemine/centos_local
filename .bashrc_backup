@@ -6,15 +6,20 @@ fi
 #----------------------------
 
 
-#------------------------+
-#      OS setting        |
-#------------------------+
+#--------------+
+#  OS setting  |
+#--------------+
 
 #Locale
 LANG=ja_JP.UTF-8
 
 #Prompt
 PS1='[\u] \w \$ '
+
+#centos version
+alias version='cat /etc/redhat-release'
+
+
 
 
 #------------------------+
@@ -25,11 +30,11 @@ export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
-#----------+
-#  Alias   |
-#----------+
 
-#File operation
+#------------------+
+#  File operation  |
+#------------------+
+
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -l -a'
@@ -40,22 +45,37 @@ alias lsc='ls -AlFh --show-control-chars --color=auto'
 alias df='df -h'
 
 
-#centos version
-alias version='cat /etc/redhat-release'
+#Jobs
+alias jobs='jobs -l'
 
-#bash
-alias bashr='source ~/.bashrc'
-alias bashe='vim ~/.bashrc'
+#---------+
+#  Shell  |
+#---------+
 
-bashout ()
+#bashrc
+alias bashrcr='source ~/.bashrc'
+alias bashrce='vim ~/.bashrc'
+
+bashrcc ()
 {
   cp ~/.bashrc ~/synced/.bashrc_backup.txt
   cp ~/.bashrc ~/config/.bashrc_backup
   /home/vagrant/config/push.sh
 }
 
-#Jobs
-alias jobs='jobs -l'
+#bash_profile
+alias bashpror='source ~/.bash_profile'
+alias bashproe='vim ~/.bash_profile'
+
+bashproc ()
+{
+  cp ~/.bashrc ~/synced/.bash_profile_backup.txt
+  cp ~/.bashrc ~/config/.bash_profile_backup
+  /home/vagrant/config/push.sh
+}
+
+
+
 
 
 #----------+
