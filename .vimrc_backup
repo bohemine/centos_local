@@ -1,0 +1,63 @@
+
+
+"--------+
+"  File  |
+"--------+
+
+"文字エンコーディング
+set encoding=utf-8
+
+
+
+"--------+
+"  Edit  |
+"--------+
+
+
+"選択
+"g Ctrl+Aで全選択
+nnoremap g<C-a> ggVG
+
+
+"移動
+noremap <S-h> ^
+noremap <S-l> g_
+
+
+"ノーマルモード時でもCRで改行可
+nnoremap <CR> A<CR><ESC>
+
+
+"<C-l>にハイライト無効化機能を追加
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+
+"<C-p><C-n>でコマンド履歴のフィルタリングをオン
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+
+"日付を入力して挿入モードへ移行
+nmap <F5> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+
+
+
+"----------+
+"  Visual  |
+"----------+
+
+
+" カレント行ハイライトON
+set cursorline
+
+" アンダーラインを引く(gui)
+highlight CursorLine gui=underline guifg=NONE guibg=NONE
+
+"検索文字列をハイライトする。(_vimrcではなく_gvimrcで設定する必要がある)
+set hlsearch
+
+"行番号表示
+set number
+
+
+
