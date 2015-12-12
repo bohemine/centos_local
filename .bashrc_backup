@@ -58,7 +58,7 @@ alias bashrce='vim ~/.bashrc'
 
 bashrcc ()
 {
-  ori_dir=pwd
+  ori_dir=${pwd}
  
   cp ~/.bashrc ~/synced/.bashrc_backup.txt
   cp ~/.bashrc ~/config/.bashrc_backup
