@@ -60,6 +60,7 @@ bashrcc ()
 {
   cp ~/.bashrc ~/synced/.bashrc_backup.txt
   cp ~/.bashrc ~/config/.bashrc_backup
+  cd /home/vagrant/config
   /home/vagrant/config/push.sh
 }
 
