@@ -58,10 +58,13 @@ alias bashrce='vim ~/.bashrc'
 
 bashrcc ()
 {
+  ori_dir=pwd
+ 
   cp ~/.bashrc ~/synced/.bashrc_backup.txt
   cp ~/.bashrc ~/config/.bashrc_backup
   cd /home/vagrant/config
   /home/vagrant/config/push.sh
+  cd $ori_dir
 }
 
 #bash_profile
