@@ -56,13 +56,13 @@ alias bashrce='vim ~/.bashrc'
 
 bashrcc ()
 {
-  source ~/.bashrc
-  ori_dir=$(pwd)
-  \cp ~/.bashrc ~/synced/.bashrc_backup.txt
-  \cp ~/.bashrc ~/config/.bashrc_backup
-  cd /home/vagrant/config
-  /home/vagrant/config/push.sh 
-  cd $ori_dir
+ source ~/.bashrc
+ ori_dir=$(pwd)
+ \cp ~/.bashrc ~/synced/.bashrc_backup.txt
+ \cp ~/.bashrc ~/config/.bashrc_backup
+ cd /home/vagrant/config
+ /home/vagrant/config/push.sh 
+ cd $ori_dir
 }
 
 
@@ -71,13 +71,13 @@ alias bashproe='vim ~/.bash_profile'
 
 bashproc ()
 {
-  source ~/.bash_profile
-  ori_dir=$(pwd)
-  \cp ~/.bash_profile ~/synced/.bash_profile_backup.txt
-  \cp ~/.bash_profile ~/config/.bash_profile_backup
-  cd /home/vagrant/config
-  /home/vagrant/config/push.sh
-  cd $ori_dir
+ source ~/.bash_profile
+ ori_dir=$(pwd)
+ \cp ~/.bash_profile ~/synced/.bash_profile_backup.txt
+ \cp ~/.bash_profile ~/config/.bash_profile_backup
+ cd /home/vagrant/config
+ /home/vagrant/config/push.sh
+ cd $ori_dir
 }
 
 
@@ -88,13 +88,28 @@ alias vimrce='vim ~/.vimrc'
 
 vimrcc ()
 {
-  ori_dir=$(pwd)
-  \cp ~/.vimrc ~/synced/.vimrc_backup.txt
-  \cp ~/.vimrc ~/config/.vimrc_backup
-  cd /home/vagrant/config
-  /home/vagrant/config/push.sh
-  cd $ori_dir
+ ori_dir=$(pwd)
+ \cp ~/.vimrc ~/synced/.vimrc_backup.txt
+ \cp ~/.vimrc ~/config/.vimrc_backup
+ cd /home/vagrant/config
+ /home/vagrant/config/push.sh
+ cd $ori_dir
 }
+
+
+#----------+
+#   Cron   |
+#----------+
+
+#alias crone='crontab -e'
+alias crone ='vim ~/.crontab'
+
+crontab ()
+{
+
+}
+
+
 
 
 
