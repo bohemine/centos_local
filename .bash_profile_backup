@@ -8,12 +8,13 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
-PATH=$PATH:$HOME/.node
+PATH=$PATH:/home/vagrant/.nvm/versions/node/v5.2.0/bin/node
 
 export PATH
+export NODE_PATH=/home/vagrant/.nvm/versions/node/v5.2.0/lib/node_modules
 
-
-
+#File system mount
+sudo mount -t vboxsf home_vagrant_synced /home/vagrant/synced
 
 
 
