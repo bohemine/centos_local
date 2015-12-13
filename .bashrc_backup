@@ -101,8 +101,7 @@ vimrcc ()
 #   Cron   |
 #----------+
 
-#alias crone='crontab -e'
-alias crone ='vim ~/.crontab'
+alias crone='vim ~/.crontab'
 
 crontab ()
 {
