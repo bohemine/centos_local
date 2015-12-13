@@ -103,13 +103,16 @@ vimrcc ()
 
 alias crone='vim ~/.crontab'
 
-crontab ()
+cronc ()
 {
-
+ ori_dir=$(pwd)
+ \cp ~/.crontab ~/synced/.crontab_backup.txt
+ \cp ~/.crontab ~/config/.crontab_backup
+ cd /home/vagrant/config
+ /home/vagrant/config/push.sh
+ cd $ori_dir
+ crontab ~/.crontab
 }
-
-
-
 
 
 
