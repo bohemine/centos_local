@@ -1,0 +1,11 @@
+SHELL=/bin/bash
+#PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+
+
+#run-parts
+#m h d M dow {command or script}
+
+
+
