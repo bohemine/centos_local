@@ -51,13 +51,12 @@ alias jobs='jobs -l'
 #---------+
 #  Shell  |
 #---------+
-
 #bashrc
-alias bashrcr='source ~/.bashrc'
 alias bashrce='vim ~/.bashrc'
 
 bashrcc ()
 {
+  source ~/.bashrc
   ori_dir=$(pwd)
   \cp ~/.bashrc ~/synced/.bashrc_backup.txt
   \cp ~/.bashrc ~/config/.bashrc_backup
@@ -68,11 +67,11 @@ bashrcc ()
 
 
 #bash_profile
-alias bashpror='source ~/.bash_profile'
 alias bashproe='vim ~/.bash_profile'
 
 bashproc ()
 {
+  source ~/.bash_profile
   ori_dir=$(pwd)
   \cp ~/.bash_profile ~/synced/.bash_profile_backup.txt
   \cp ~/.bash_profile ~/config/.bash_profile_backup
@@ -85,7 +84,6 @@ bashproc ()
 #-------+
 #  Vim  |
 #-------+
-
 alias vimrce='vim ~/.vimrc'
 
 vimrcc ()
@@ -105,8 +103,6 @@ vimrcc ()
 #----------+
 #   Tmux   |
 #----------+
-
-#tmux
 alias tmuxe='vim ~/.tmux.conf'
 alias tmuxout='cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt'
 
