@@ -108,7 +108,7 @@ cronc ()
  ori_dir=$(pwd)
  \cp ~/.crontab ~/synced/.crontab_backup.txt
  \cp ~/.crontab ~/config/.crontab_backup
- cd /home/vagrant/config
+ cd /home/$USER/config
  /home/vagrant/config/push.sh
  cd $ori_dir
  crontab ~/.crontab
@@ -121,9 +121,17 @@ cronc ()
 #   Tmux   |
 #----------+
 alias tmuxe='vim ~/.tmux.conf'
-alias tmuxout='cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt'
 
-
+tmuxc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt
+ \cp ~/.tmux.conf ~/config/.tmux.conf_backup
+ cd ~/config
+ /home/$USER/config/push.sh
+ cd $ori_dir
+ crontab ~/.crontab
+}
 
 
 #run tmux
