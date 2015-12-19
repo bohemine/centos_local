@@ -123,6 +123,9 @@ cronc ()
 alias tmuxe='vim ~/.tmux.conf'
 alias tmuxout='cp ~/.tmux.conf ~/synced/.tmux.conf_backup.txt'
 
+
+
+
 #run tmux
 if [ -z $TMUX ]; then
   if $(tmux has-session); then
